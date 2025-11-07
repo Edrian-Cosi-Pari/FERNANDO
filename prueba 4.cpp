@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
-
+#include <vector>
+#include <algorithm>
 using namespace std;
-
 struct Persona 
 {
     string nombre;
@@ -11,7 +11,7 @@ struct Persona
 int main() 
 {
     vector<Persona> personas;
-
+    
     personas.push_back({"Ana", 25});
     personas.push_back({"Luis", 19});
     personas.push_back({"Carlos", 30});
@@ -19,14 +19,13 @@ int main()
 
     // Ordenar por edad (de menor a mayor)
     sort(personas.begin(), personas.end(),
-         [](Persona a, Persona b) 
-		 {
+         [](Persona a, Persona b) {
              return a.edad < b.edad;
          });
 
-    for (int i = 0; i < personas.size(); i++) 
-	{
+    for (int i = 0; i < personas.size(); i++) {
         cout << personas[i].nombre << " - " << personas[i].edad << endl;
     }
+
     return 0;
 }
