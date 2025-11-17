@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main() 
+{
+	ifstream archivoLectura("ejemplo.txt", ios::in);
+	ofstream archivoEscritura("salida.txt", ios::out);
+	fstream archivoMixto("mixto.txt", ios::in | ios::out);
+ 
+	if (!archivoLectura.is_open()) 
+	{
+    	cout << "No se pudo abrir ejemplo.txt para lectura.\n";
+	}
+ 
+	if (!archivoEscritura.is_open()) 
+	{
+    	cout << "No se pudo abrir salida.txt para escritura.\n";
+	}
+ 
+	if (!archivoMixto.is_open()) 
+	{
+    	cout << "No se pudo abrir mixto.txt para lectura/escritura.\n";
+	}
+ 
+	// Cerrar si se abrieron
+	archivoLectura.close();
+	archivoEscritura.close();
+	archivoMixto.close();
+ 
+	return 0;
+}
+
