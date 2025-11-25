@@ -9,9 +9,9 @@ struct Alumno {
 	
 	int id;
 	string nombre;
-	string nivel;     // antes: grado
+	string nivel;
 	float promedio;
-	string grado;     // antes: seccion
+	string grado;
 	
 };
 
@@ -38,8 +38,8 @@ void registrarAlumnos(){
 	
 	Alumno x;
 	cout<<"Ingrese el nombre del Alumno: "; cin.ignore(); getline(cin,x.nombre);
-	cout<<"Ingrese el nivel (Primaria/Secundaria): "; cin>>x.nivel;     // cambiado
-	cout<<"Ingrese el grado (Primero..Quinto): "; cin>>x.grado;        // cambiado
+	cout<<"Ingrese el nivel (Primaria/Secundaria): "; cin>>x.nivel; 
+	cout<<"Ingrese el grado (Primero..Quinto): "; cin>>x.grado;
 	alumnos.push_back(x);
 	cout<<"Alumno "<<x.nombre<<" registrado en "<<x.grado<<" de "<<x.nivel<<endl;
 }
@@ -56,8 +56,8 @@ void listarAlumnos(){
 
 	    for (auto a : alumnos) {
 	        maxNombre = max(maxNombre, (int)a.nombre.size());
-	        maxNivel  = max(maxNivel,  (int)a.nivel.size());     // cambiado
-	        maxGrado  = max(maxGrado,  (int)a.grado.size());     // cambiado
+	        maxNivel  = max(maxNivel,  (int)a.nivel.size());
+	        maxGrado  = max(maxGrado,  (int)a.grado.size()); 
 	    }
 
 	    maxNombre += 2;
@@ -74,7 +74,7 @@ void listarAlumnos(){
 	    cout << "\n";
 
 	    for (auto a : alumnos) {
-	        cout << left<< setw(maxNombre) << a.nombre << " | "<< setw(maxNivel)  << a.nivel  << " | " << setw(maxGrado)  << a.grado  << "\n";  // cambiado
+	        cout << left<< setw(maxNombre) << a.nombre << " | "<< setw(maxNivel)  << a.nivel  << " | " << setw(maxGrado)  << a.grado  << "\n";
 	    }
 	}
 }
